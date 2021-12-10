@@ -39,7 +39,7 @@ services:
     restart: always
 
   ojs:
-    image: pkpofficial/ojs:3_3_0-8
+    image: joako407/ojs:main
     env_file:
       - .env
     container_name: "ojs_app_${COMPOSE_PROJECT_NAME:-demo}"
