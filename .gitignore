@@ -1,2 +1,5 @@
 volumes/*
 files/*
+node_modules
+mix-manifest.json
+.DS_Store

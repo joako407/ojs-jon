@@ -1,0 +1,28 @@
+{
+  "name": "ojs-jon",
+  "version": "1.0.0",
+  "description": "OJS Jon TailWindCSS",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joako407/ojs-jon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joako407/ojs-jon/issues"
+  },
+  "homepage": "https://github.com/joako407/ojs-jon#readme",
+  "devDependencies": {
+    "laravel-mix": "^6.0.39",
+    "tailwindcss": "^3.0.0"
+  }
+}
