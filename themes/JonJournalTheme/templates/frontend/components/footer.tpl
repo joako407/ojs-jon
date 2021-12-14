@@ -35,11 +35,15 @@
 				{$pageFooter}
 			</div>
 		{/if}
+		<div>@{{$pluginData.plugin_path}}</div>
 
 		<div role="complementary">
-			<a class="float-right max-w-[150px] p-4" href="{url page="about" op="aboutThisPublishingSystem"}">
-				<img alt="{translate key="about.aboutThisPublishingSystem"}" src="{$baseUrl}/{$brandImage}">
-			</a>
+			<div class="float-right p-4 max-w-[150px]">
+				<a href="{url page="about" op="aboutThisPublishingSystem"}">
+					<img alt="{translate key="about.aboutThisPublishingSystem"}" src="{$baseUrl}/{$pluginData.plugin_path}/templates/images/ojs_brand.png">
+				</a>
+				<div>WebDev by Rayyan Secutech</div>
+			</div>
 		</div>
 	</div>
 </div><!-- pkp_structure_footer_wrapper -->

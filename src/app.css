@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  a {
+    @apply text-blue-600 underline;
+  }
+}
+
+
+/* Used for the backend styling of nav bars */
+.app__navItem:not(.app__navItem.app__navItem--hasSubmenu):not(a.app__navItem--isCurrent) {
+  @apply inline-block py-1 px-3 text-white w-10/12 hover:translate-x-3 hover:border-l-white hover:border-l-4 transition-all;
+}
+
+.app__navItem.app__navItem--hasSubmenu {
+  @apply text-white;
+}
+
+a.app__navItem--isCurrent{
+  @apply inline-block py-1 px-3 translate-x-3 w-10/12 bg-white bg-opacity-40 border-l-white border-l-4;
+}
+
+.app__nav {
+  @apply bg-ojs-blue;
+}

@@ -4,7 +4,11 @@ module.exports = {
     "./themes/**/*.tpl"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'ojs-blue' : "#002c40"
+      }
+    },
   },
   plugins: [],
 }

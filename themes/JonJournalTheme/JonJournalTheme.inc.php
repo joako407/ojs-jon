@@ -13,6 +13,8 @@ class JonJournalTheme extends ThemePlugin {
 		$this->setParent('defaultthemeplugin');
 		$this->addStyle('jontheme', 'styles/borderless.less');
 		$this->addStyle('tailwind', 'styles/app.css');
+		$this->addStyle('backend', 'styles/app.css', ['contexts' => 'backend' ]);
+		HookRegistry::register ('TemplateManager::display', array($this, 'loadTemplateData'));
 		// $this->modifyStyle('default', ['addLess' => array('styles/borderless.less')]);
 	}
 
@@ -34,5 +36,20 @@ class JonJournalTheme extends ThemePlugin {
 	 */
 	public function getDescription() {
 		return 'This plugin is an example created for a tutorial on how to create a plugin.';
+	}
+
+	public function loadTemplateData($hookName, $args) {
+
+		// Retrieve the TemplateManager
+		$templateMgr = $args[0];
+
+		// Attach a custom piece of data to the TemplateManager
+		$pluginData = [
+			'plugin_path' => $this->getPluginPath().'/templates/images/ojs_brand.png',
+			'this_obj' => $this,
+		];
+		$templateMgr->assign('pluginData', $pluginData);
+
+		return false;
 	}
 }
