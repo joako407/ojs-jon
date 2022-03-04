@@ -28,22 +28,21 @@
 <div class="pkp_structure_footer_wrapper" role="contentinfo">
 	<a id="pkp_content_footer"></a>
 
-	<div class="pkp_structure_footer">
+	<div class="pkp_structure_footer h-min py-6">
 
 		{if $pageFooter}
 			<div class="pkp_footer_content">
 				{$pageFooter}
 			</div>
 		{/if}
-		<div>@{{$pluginData.plugin_path}}</div>
 
 		<div role="complementary">
-			<div class="float-right p-4 max-w-[150px]">
-				<a href="{url page="about" op="aboutThisPublishingSystem"}">
-					<img alt="{translate key="about.aboutThisPublishingSystem"}" src="{$baseUrl}/{$pluginData.plugin_path}/templates/images/ojs_brand.png">
-				</a>
-				<div>WebDev by Rayyan Secutech</div>
-			</div>
+				<div class="float-right">
+					<a href="{url page="about" op="aboutThisPublishingSystem"}">
+						<img class="max-h-20" alt="{translate key="about.aboutThisPublishingSystem"}" src="{$baseUrl}/{$pluginData.plugin_path}/templates/images/ojs_brand.png">
+					</a>
+					<div>WebDev by Rayyan Secutech</div>
+				</div>
 		</div>
 	</div>
 </div><!-- pkp_structure_footer_wrapper -->

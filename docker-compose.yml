@@ -1,10 +1,10 @@
 # File: docker-compose.yml
-# Access via "http://localhost:8081"
+# Access via 'http://localhost:8081'
 #
 # Call example:
 # $ docker-compose up
 
-version: "3.6"
+version: '3.6'
 
 networks:
   inside:
@@ -21,14 +21,14 @@ services:
     image: mariadb:10.2
     env_file:
       - .env
-    container_name: "ojs_db_${COMPOSE_PROJECT_NAME:-demo}"
+    container_name: 'ojs_db_${COMPOSE_PROJECT_NAME:-demo}'
     environment:
-      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD:-ojsPwd}"
-      MYSQL_DATABASE: "${MYSQL_DATABASE:-ojs}"
-      MYSQL_USER: "${MYSQL_USER:-ojs}"
-      MYSQL_PASSWORD: "${MYSQL_PASSWORD:-ojsPwd}"
+      MYSQL_ROOT_PASSWORD: '${MYSQL_ROOT_PASSWORD:-ojsPwd}'
+      MYSQL_DATABASE: '${MYSQL_DATABASE:-ojs}'
+      MYSQL_USER: '${MYSQL_USER:-ojs}'
+      MYSQL_PASSWORD: '${MYSQL_PASSWORD:-ojsPwd}'
     ports:
-      - '3306:3306'
+      - '${DB_PORT}:3306'
     volumes:
       - dbvolume:/var/lib/mysql
 #      - ./volumes/logs/db:/var/log/mysql
@@ -36,18 +36,16 @@ services:
 #      - ./volumes/migration:/docker-entrypoint-initdb.d
     networks:
       - inside
-    restart: always
 
   ojs:
     image: joako407/ojs:main
     env_file:
       - .env
-    container_name: "ojs_app_${COMPOSE_PROJECT_NAME:-demo}"
-    hostname: "${COMPOSE_PROJECT_NAME:-demo}"
-    restart: always
+    container_name: 'ojs_app_${COMPOSE_PROJECT_NAME:-demo}'
+    hostname: '${COMPOSE_PROJECT_NAME:-demo}'
     ports:
-      - "${HTTP_PORT:-8081}:80"
-      - "${HTTPS_PORT:-443}:443"
+      - '${HTTP_PORT:-8081}:80'
+      - '${HTTPS_PORT:-443}:443'
     volumes:
       - journalvolume:/var/www/html
       - ./files:/var/www/files
