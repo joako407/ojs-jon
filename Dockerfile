@@ -115,6 +115,6 @@ COPY --chown=apache:apache  src/ .
 
 EXPOSE 80 443
 
-# VOLUME [ "/var/www/files", "/var/www/html/public", "/var/www/html/" ]
+VOLUME [ "/var/www/files", "/var/www/html/public", "/var/www/html/" ]
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]

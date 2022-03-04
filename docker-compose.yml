@@ -13,8 +13,6 @@ networks:
 volumes:
   dbvolume:
     driver : local
-  journalvolume:
-    driver : local
 
 services:
   db:
@@ -47,7 +45,7 @@ services:
       - '${HTTP_PORT:-8081}:80'
       - '${HTTPS_PORT:-443}:443'
     volumes:
-      - journalvolume:/var/www/html
+      - ./src:/var/www/html
       - ./files:/var/www/files
       - ./volumes/logs/app:/var/log/apache2
       - ./themes/JonJournalTheme:/var/www/html/plugins/themes/JonJournalTheme
