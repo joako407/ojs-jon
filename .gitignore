@@ -3,3 +3,4 @@ files/*
 node_modules
 mix-manifest.json
 .DS_Store
+src/cache
