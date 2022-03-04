@@ -18,7 +18,7 @@ class ClassicChildTheme extends ThemePlugin {
 	 * install, enable and disable plugins.
 	 */
 	public function getDisplayName() {
-		return 'Jon Journal Theme';
+		return 'Classic Child';
 	}
 
 	/**
