@@ -115,7 +115,7 @@ enable_beacon = Off
 ; Statement, rather than a separate Privacy Statement for each journal. Setting
 ; this to "Off" will allow you to enter a site-wide Privacy Statement as well
 ; as separate Privacy Statements for each journal.
-sitewide_privacy_statement = Off
+sitewide_privacy_statement = On
 
 
 ;;;;;;;;;;;;;;;;;;;;;
@@ -124,7 +124,7 @@ sitewide_privacy_statement = Off
 
 [database]
 
-driver = mysqli
+driver = mysql
 host = db
 username = ojs2
 password = ojs2
@@ -496,10 +496,10 @@ xslt_command = ""
 ; Display a stack trace when a fatal error occurs.
 ; Note that this may expose private information and should be disabled
 ; for any production system.
-show_stacktrace = Off
+show_stacktrace = On
 
 ; Display an error message when something goes wrong.
-display_errors = Off
+display_errors = On
 
 ; Display deprecation warnings
 deprecation_warnings = Off
