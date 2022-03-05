@@ -1,15 +1,15 @@
 {
 	"folders": [
 		{
-			"path": ".",
-			"name": "Root Of All Sources"
-		},
-		{
 			"path": "./src/plugins/themes/ClassicChildTheme",
 		},
 		{
 			"path": "./src/plugins/themes/",
 			"name": "Theme_Reference"
+		},
+		{
+			"path": ".",
+			"name": "Root Of All Sources"
 		}
 	],
 	"settings": {}

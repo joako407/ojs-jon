@@ -27,10 +27,13 @@
 				{translate key="site.noJournals"}
 			{else}
 				<div>
+					{assign var="length" value=$journals|@count}
+					{assign var="count" value=0}
 					{foreach from=$journals item=journal}
 						{capture assign="url"}{url journal=$journal->getPath()}{/capture}
 						{assign var="thumb" value=$journal->getLocalizedSetting('journalThumbnail')}
 						{assign var="description" value=$journal->getLocalizedDescription()}
+
 						<div class="index-site-journal">
 							<div class="index-site-journal-header">
 								<h3>
@@ -58,11 +61,17 @@
 								<a class="btn btn-primary view" href="{$url|escape}">
 									{translate key="site.journalView"}
 								</a>
-								<a class="btn btn-secondary view" href="{url|escape journal=$journal->getPath() page="issue" op="current"}">
+								{* <a class="btn btn-secondary view" href="{url|escape journal=$journal->getPath() page="issue" op="current"}">
 									{translate key="site.journalCurrent"}
-								</a>
+								</a> *}
 							</div>
 						</div>
+						{capture}
+							{$count++}
+						{/capture}
+						{if $count != $length}
+							<hr>
+						{/if}
 					{/foreach}
 				</div>
 			{/if}

@@ -18,7 +18,7 @@ class ClassicChildTheme extends ThemePlugin {
 	 * install, enable and disable plugins.
 	 */
 	public function getDisplayName() {
-		return 'Jon Journal Theme';
+		return 'RST Journal Theme';
 	}
 
 	/**
@@ -28,6 +28,6 @@ class ClassicChildTheme extends ThemePlugin {
 	 * install, enable and disable plugins.
 	 */
 	public function getDescription() {
-		return 'This plugin is an example created for a tutorial on how to create a plugin.';
+		return 'This theme is a derivative of the OJS Classic Theme customized by RST for UNISSA OJS.';
 	}
 }
