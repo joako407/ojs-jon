@@ -3,8 +3,8 @@
 <version>
 	<application>ClassicChildTheme</application>
 	<type>plugins.themes</type>
-	<release>0.1.0.0</release>
-	<date>2019-05-15</date>
+	<release>0.1.0.1</release>
+	<date>2022-03-07</date>
 	<lazy-load>1</lazy-load>
 	<class>ClassicChildTheme</class>
 </version>
