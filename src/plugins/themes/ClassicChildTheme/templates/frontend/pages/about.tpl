@@ -19,7 +19,11 @@
 		{include file="frontend/components/editLink.tpl" page="management" op="settings" path="context" anchor="masthead" sectionTitleKey="about.aboutContext"}
 
 		{$currentContext->getLocalizedSetting('about')}
+
+		{include file="frontend/components/sidebar.tpl"}
 	</div>
+
+
 </main><!-- .page -->
 
 {include file="frontend/components/footer.tpl"}

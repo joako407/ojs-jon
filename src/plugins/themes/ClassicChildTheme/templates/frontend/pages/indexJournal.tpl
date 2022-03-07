@@ -41,63 +41,68 @@
 	{/if}
 
 	<div class="container-fluid container-page">
+		<div>
+			{* Announcements *}
+			{if $announcements}
+				<section class="announcements">
+					<h2>{translate key="announcement.announcements"}</h2>
+					<div class="row">
+						{foreach from=$announcements item=announcement}
+							<article class="col-md-4 announcement">
+								<p class="announcement_date">{$announcement->getDatePosted()|date_format:$dateFormatShort|escape}</p>
+								<h3 class="announcement_title">
+									<a href="{url router=$smarty.const.ROUTE_PAGE page="announcement" op="view" path=$announcement->getId()|escape}">
+										{$announcement->getLocalizedTitle()|escape}
+									</a>
+								</h3>
+							</article>
+						{/foreach}
+					</div>
+				</section>
+			{/if}
 
-		{* Announcements *}
-		{if $announcements}
-			<section class="announcements">
-				<h2>{translate key="announcement.announcements"}</h2>
-				<div class="row">
-					{foreach from=$announcements item=announcement}
-						<article class="col-md-4 announcement">
-							<p class="announcement_date">{$announcement->getDatePosted()|date_format:$dateFormatShort|escape}</p>
-							<h3 class="announcement_title">
-								<a href="{url router=$smarty.const.ROUTE_PAGE page="announcement" op="view" path=$announcement->getId()|escape}">
-									{$announcement->getLocalizedTitle()|escape}
-								</a>
-							</h3>
-						</article>
-					{/foreach}
-				</div>
-			</section>
-		{/if}
+			{call_hook name="Templates::Index::journal"}
 
-		{call_hook name="Templates::Index::journal"}
+			{* Latest issue *}
+			{if $issue}
+				<section class="current_issue">
+					<header>
+						{strip}
+							<h2 class="current_issue_title">
+								<span class="current_issue_label">{translate key="journal.currentIssue"}</span>
+								{if $issueIdentificationString}
+									<span class="current_issue_identification">{$issueIdentificationString|escape}</span>
+								{/if}
+							</h2>
+						{/strip}
 
-		{* Latest issue *}
-		{if $issue}
-			<section class="current_issue">
-				<header>
-					{strip}
-						<h2 class="current_issue_title">
-							<span class="current_issue_label">{translate key="journal.currentIssue"}</span>
-							{if $issueIdentificationString}
-						 		<span class="current_issue_identification">{$issueIdentificationString|escape}</span>
-							{/if}
-						</h2>
-					{/strip}
+						{* Published date *}
+						{if $issue->getDatePublished()}
+							<p class="published">
+								<span class="date_label">
+									{translate key="submissions.published"}
+								</span>
+								<span class="date_format">
+										{$issue->getDatePublished()|date_format:$dateFormatLong}
+								</span>
+							</p>
+						{/if}
+					</header>
+					{include file="frontend/objects/issue_toc.tpl"}
+				</section>
+			{/if}
 
-					{* Published date *}
-					{if $issue->getDatePublished()}
-						<p class="published">
-							<span class="date_label">
-								{translate key="submissions.published"}
-							</span>
-							<span class="date_format">
-									{$issue->getDatePublished()|date_format:$dateFormatLong}
-							</span>
-						</p>
-					{/if}
-				</header>
-				{include file="frontend/objects/issue_toc.tpl"}
-			</section>
-		{/if}
+			{* Additional Homepage Content *}
+			{if $additionalHomeContent}
+				<section class="additional_content">
+					{$additionalHomeContent}
+				</section>
+			{/if}
+		</div>
 
-		{* Additional Homepage Content *}
-		{if $additionalHomeContent}
-			<section class="additional_content">
-				{$additionalHomeContent}
-			</section>
-		{/if}
+		{include file="frontend/components/sidebar.tpl"}
+
+		{debug}
 	</div>
 </main><!-- .page -->
 

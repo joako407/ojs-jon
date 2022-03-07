@@ -1,0 +1,37 @@
+// Used to override the container-narrow classes, 
+// typically will be used to show a little bit more of the sidebar
+
+@media (min-width: 1400px) {
+
+	.container-narrow {
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+	.container-narrow {
+		padding-left: 20%;
+		padding-right: 20%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+	.container-narrow {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+	.container-narrow {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}

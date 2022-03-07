@@ -4,6 +4,10 @@
 			"path": "./src/plugins/themes/ClassicChildTheme",
 		},
 		{
+			"path": "./other_src",
+			"name": "Tailwind Source"
+		},
+		{
 			"path": "./src/plugins/themes/",
 			"name": "Theme_Reference"
 		},

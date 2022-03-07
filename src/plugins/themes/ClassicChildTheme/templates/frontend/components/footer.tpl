@@ -11,11 +11,6 @@
 
 <footer class="site-footer">
 	<div class="container-fluid container-footer">
-		{if $hasSidebar}
-			<div class="sidebar_wrapper" role="complementary">
-				{call_hook name="Templates::Common::Sidebar"}
-			</div>
-		{/if}
 		<div class="additional-footer-info">
 			{if $pageFooter}
 				<div class="user-page-footer">
