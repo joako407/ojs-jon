@@ -14,8 +14,17 @@
 
 <main class="page page_privacy">
 	<div class="container-fluid container-page container-narrow">
-		{include file="frontend/components/headings.tpl" currentTitleKey="manager.setup.privacyStatement"}
-		{$privacyStatement}
+	<div class="tw-ojs-grid">
+		{if $hasSidebar}
+			<div class="tw-ojs-grid-content">
+		{else}
+			<div class="tw-ojs-grid-full">
+		{/if}
+				{include file="frontend/components/headings.tpl" currentTitleKey="manager.setup.privacyStatement"}
+				{$privacyStatement}
+			</div>
+			{include file="frontend/components/sidebar.tpl"}
+		</div>
 	</div>
 </main><!-- .page -->
 

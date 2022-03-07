@@ -14,9 +14,19 @@
 
 <main class="page page_editorial_team">
 	<div class="container-fluid container-page container-narrow">
+		<div class="tw-ojs-grid">
+		{if $hasSidebar}
+			<div class="tw-ojs-grid-content">
+		{else}
+			<div class="tw-ojs-grid-full">
+		{/if}
+
 		{include file="frontend/components/headings.tpl" currentTitleKey="about.editorialTeam"}
 		{include file="frontend/components/editLink.tpl" page="management" op="settings" path="context" anchor="masthead" sectionTitleKey="about.editorialTeam"}
 		{$currentContext->getLocalizedSetting('editorialTeam')}
+		</div>
+		{include file="frontend/components/sidebar.tpl"}
+		</div>
 	</div>
 </main><!-- .page -->
 

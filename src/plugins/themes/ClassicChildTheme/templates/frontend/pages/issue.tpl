@@ -31,6 +31,8 @@
 			{include file="frontend/components/headings.tpl" currentTitle=$issueIdentificationString}
 			{include file="frontend/objects/issue_toc.tpl"}
 		{/if}
+
+		
 	</div>
 </main>
 

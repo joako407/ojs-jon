@@ -15,15 +15,19 @@
 
 <main class="page page_about">
 	<div class="container-fluid container-page container-narrow">
-		{include file="frontend/components/headings.tpl" currentTitleKey="about.aboutContext"}
-		{include file="frontend/components/editLink.tpl" page="management" op="settings" path="context" anchor="masthead" sectionTitleKey="about.aboutContext"}
+		<div class="tw-ojs-grid">
+		{if $hasSidebar}
+			<div class="tw-ojs-grid-content">
+		{else}
+			<div class="tw-ojs-grid-full">
+		{/if}
+				{include file="frontend/components/headings.tpl" currentTitleKey="about.aboutContext"}
+				{include file="frontend/components/editLink.tpl" page="management" op="settings" path="context" anchor="masthead" sectionTitleKey="about.aboutContext"}
 
-		{$currentContext->getLocalizedSetting('about')}
-
-		{include file="frontend/components/sidebar.tpl"}
+				{$currentContext->getLocalizedSetting('about')}
+			</div>
+			{include file="frontend/components/sidebar.tpl"}
 	</div>
-
-
 </main><!-- .page -->
 
 {include file="frontend/components/footer.tpl"}

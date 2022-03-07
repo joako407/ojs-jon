@@ -115,7 +115,7 @@ enable_beacon = Off
 ; Statement, rather than a separate Privacy Statement for each journal. Setting
 ; this to "Off" will allow you to enter a site-wide Privacy Statement as well
 ; as separate Privacy Statements for each journal.
-sitewide_privacy_statement = On
+sitewide_privacy_statement = Off
 
 
 ;;;;;;;;;;;;;;;;;;;;;

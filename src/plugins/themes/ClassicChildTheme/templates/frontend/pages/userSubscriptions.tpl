@@ -20,6 +20,11 @@
 
 <main class="page page_user_subscriptions">
 	<div class="container-fluid container-page container_subscriptions container-narrow">
+	{if $hasSidebar}
+		<div class="tw-ojs-grid-content">
+	{else}
+		<div class="tw-ojs-grid-full">
+	{/if}
 
 		{include file="frontend/components/headings.tpl" currentTitleKey="user.subscriptions.mySubscriptions"}
 		{include file="frontend/components/subscriptionContact.tpl"}
@@ -225,6 +230,10 @@
 				{/if}
 			</div>
 		{/if}
+
+		</div>
+			{include file="frontend/components/sidebar.tpl"}
+		</div>
 	</div>
 </main>
 

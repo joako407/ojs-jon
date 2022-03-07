@@ -15,8 +15,14 @@
 
 <main class="page page_about_publishing_system">
 	<div class="container-fluid container-page container-narrow">
-		{include file="frontend/components/headings.tpl" currentTitleKey="about.aboutSoftware"}
+	<div class="tw-ojs-grid">
+	{if $hasSidebar}
+		<div class="tw-ojs-grid-content">
+	{else}
+		<div class="tw-ojs-grid-full">
+	{/if}
 
+		{include file="frontend/components/headings.tpl" currentTitleKey="about.aboutSoftware"}
 		<p>
 			{if $currentContext}
 				{translate key="about.aboutOJSJournal" ojsVersion=$appVersion contactUrl=$contactUrl}
@@ -24,6 +30,9 @@
 				{translate key="about.aboutOJSSite" ojsVersion=$appVersion}
 			{/if}
 		</p>
+		</div>
+		{include file="frontend/components/sidebar.tpl"}
+		</div>
 	</div>
 </main><!-- .page -->
 

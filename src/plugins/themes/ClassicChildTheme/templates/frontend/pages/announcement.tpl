@@ -13,8 +13,18 @@
 
 <div class="page page_announcement">
 	<div class="container-fluid container-page container-narrow">
-		{* Display book details *}
-		{include file="frontend/objects/announcement_full.tpl"}
+		<div class="tw-ojs-grid">
+		{if $hasSidebar}
+			<div class="tw-ojs-grid-content">
+		{else}
+			<div class="tw-ojs-grid-full">
+		{/if}
+
+			{* Display book details *}
+			{include file="frontend/objects/announcement_full.tpl"}
+			</div>
+			{include file="frontend/components/sidebar.tpl"}
+		</div>
 	</div>
 </div><!-- .page -->
 

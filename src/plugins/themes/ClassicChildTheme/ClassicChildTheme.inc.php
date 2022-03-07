@@ -36,7 +36,8 @@ class ClassicChildTheme extends ThemePlugin {
 		$this->modifyStyle('stylesheet', array('addLessVariables' => join($additionalLessVariables)));
 		$this->modifyStyle('stylesheet', array('addLess' => array('styles/header.less')));
 
-
+		// For overrrides
+		$this->modifyStyle('stylesheet', array('addLess' => array('styles/overrides.less')));
 		$this->modifyStyle('stylesheet', array('addLess' => array('styles/container-narrow-override.less')));
 
 		// Line used to load Tailwind CSS file

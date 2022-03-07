@@ -12,19 +12,29 @@
 
 <div class="page page_message">
 	<div class="container-fluid container-page container-narrow">
-		{include file="frontend/components/headings.tpl" currentTitleKey=$pageTitle}
-		<div class="message-description">
-			{if $messageTranslated}
-				{$messageTranslated}
-			{else}
-				{translate key=$message}
+
+	{if $hasSidebar}
+		<div class="tw-ojs-grid-content">
+	{else}
+		<div class="tw-ojs-grid-full">
+	{/if}
+
+			{include file="frontend/components/headings.tpl" currentTitleKey=$pageTitle}
+			<div class="message-description">
+				{if $messageTranslated}
+					{$messageTranslated}
+				{else}
+					{translate key=$message}
+				{/if}
+			</div>
+			{if $backLink}
+				<div class="cmp_back_link">
+					<a href="{$backLink}">{translate key=$backLinkLabel}</a>
+				</div>
 			{/if}
 		</div>
-		{if $backLink}
-			<div class="cmp_back_link">
-				<a href="{$backLink}">{translate key=$backLinkLabel}</a>
-			</div>
-		{/if}
+		{include file="frontend/components/sidebar.tpl"}
+		</div>
 	</div>
 </div>
 

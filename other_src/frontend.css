@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .tw-ojs-grid {
+    @apply tw-grid tw-grid-cols-1 md:tw-grid-cols-4 tw-gap-4;
+  }
+
+  .tw-ojs-grid-content {
+    @apply tw-col-span-full md:tw-col-span-3;
+  }
+
+  .tw-ojs-grid-full {
+    @apply tw-col-span-full;
+  }
+}

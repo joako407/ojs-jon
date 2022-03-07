@@ -15,6 +15,13 @@
 
 <div class="page page-author-index">
 	<div class="container-fluid container-page container-narrow">
+
+	{if $hasSidebar}
+		<div class="tw-ojs-grid-content">
+	{else}	
+		<div class="tw-ojs-grid-full">
+	{/if}
+
 		{include file="frontend/components/headings.tpl" currentTitleKey="search.authorIndex"}
 
 			<div class="page-content">
@@ -58,7 +65,9 @@
 				{/if}
 			</div>
 		</div>
-
+		</div>
+		{include file="frontend/components/sidebar.tpl"}
+		</div>
 	</div>
 </div>
 

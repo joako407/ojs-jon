@@ -14,14 +14,24 @@
 
 <main class="page page_announcements">
 	<div class="container-fluid container-page container-narrow">
-		{include file="frontend/components/headings.tpl" currentTitleKey="announcement.announcements"}
-		{include file="frontend/components/editLink.tpl" page="management" op="settings" path="announcements" anchor="announcements" sectionTitleKey="announcement.announcements"}
+		<div class="tw-ojs-grid">
+		{if $hasSidebar}
+			<div class="tw-ojs-grid-content">
+		{else}
+			<div class="tw-ojs-grid-full">
+		{/if}
 
-		<div class="announcements-introduction">
-			{$announcementsIntroduction|strip_unsafe_html}
+			{include file="frontend/components/headings.tpl" currentTitleKey="announcement.announcements"}
+			{include file="frontend/components/editLink.tpl" page="management" op="settings" path="announcements" anchor="announcements" sectionTitleKey="announcement.announcements"}
+
+			<div class="announcements-introduction">
+				{$announcementsIntroduction|strip_unsafe_html}
+			</div>
+
+			{include file="frontend/components/announcements.tpl"}
+			</div>
 		</div>
-
-		{include file="frontend/components/announcements.tpl"}
+	{include file="frontend/components/sidebar.tpl"}
 	</div>
 </main><!-- .page -->
 

@@ -22,12 +22,21 @@
 
 <main class="page page_article">
 	<div class="container-fluid container-page">
+		<div class="tw-ojs-grid">
+		{if $hasSidebar}
+			<div class="tw-ojs-grid-content">
+		{else}
+			<div class="tw-ojs-grid-full">
+		{/if}
 
 		{* Show article overview *}
 		{include file="frontend/objects/article_details.tpl"}
 
-		<div class="footer-hook-block">
-			{call_hook name="Templates::Article::Footer::PageFooter"}
+				<div class="footer-hook-block">
+					{call_hook name="Templates::Article::Footer::PageFooter"}
+				</div>
+			</div>
+		{include file="frontend/components/sidebar.tpl"}
 		</div>
 	</div>
 

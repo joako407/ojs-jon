@@ -27,6 +27,13 @@
 <main class="page page_issue_archive">
 	<div class="container-fluid container-page">
 
+	<div class="tw-ojs-grid">
+	{if $hasSidebar}
+		<div class="tw-ojs-grid-content">
+	{else}	
+		<div class="tw-ojs-grid-full">
+	{/if}
+
 		{include file="frontend/components/headings.tpl" currentTitle=$pageTitle}
 
 		{* No issues have been published *}
@@ -67,6 +74,9 @@
 				total=$total
 			}
 		{/if}
+		</div>
+		{include file="frontend/components/sidebar.tpl"}
+		</div>
 	</div> <!-- end of a container -->
 </main>
 
