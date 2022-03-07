@@ -30,8 +30,8 @@
 
 			{include file="frontend/components/announcements.tpl"}
 			</div>
+			{include file="frontend/components/sidebar.tpl"}
 		</div>
-	{include file="frontend/components/sidebar.tpl"}
 	</div>
 </main><!-- .page -->
 

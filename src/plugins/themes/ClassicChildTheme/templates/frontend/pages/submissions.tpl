@@ -102,7 +102,9 @@
 				</div>
 				{/if}
 			</div>
-			{include file="frontend/components/sidebar.tpl"}
+			<div class="tw-mt-[40px]">
+				{include file="frontend/components/sidebar.tpl"}
+			</div>
 		</div>
 	</div>
 </main><!-- .page -->

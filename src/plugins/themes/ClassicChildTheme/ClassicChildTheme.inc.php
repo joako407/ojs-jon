@@ -25,10 +25,11 @@ class ClassicChildTheme extends ThemePlugin {
 			';
 		}
 
-		// Update contrast colour based on primary colour
+		// Update header links colour based on header colour
 		if ($this->isColourDark($this->getOption('headerColor'))) {
 			$additionalLessVariables[] = '
 				@header-links: #FFF;
+				@header-links-hover: #8f8f8f ;
 			';
 		}
 

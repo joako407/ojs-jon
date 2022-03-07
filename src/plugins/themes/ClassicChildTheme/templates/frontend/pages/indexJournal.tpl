@@ -104,9 +104,10 @@
 						</section>
 					{/if}
 			</div>
-
-			{include file="frontend/components/sidebar.tpl"}
-		</div>
+					<div class="tw-mt-[40px]">
+						{include file="frontend/components/sidebar.tpl"}
+					</div>
+				</div>
 	</div>
 </main><!-- .page -->
 

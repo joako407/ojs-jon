@@ -63,6 +63,9 @@
 .tw-ojs-grid-full {
     grid-column: 1 / -1
 }
+.tw-mt-\[40px\] {
+    margin-top: 40px
+}
 .tw-table {
     display: table
 }

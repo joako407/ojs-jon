@@ -1,11 +1,28 @@
 @header-links: #000;
 @header-colour: #000;
+@header-links-hover: #464646 ;
 
 .journal-logo-text,
 .nav-link {
   color: @header-links;
 }
 
+.journal-logo-text {
+	&:focus, &:hover {
+		color: @header-links-hover;
+	}
+}
+
 .header {
   background-color: @header-colour;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  background-color: @header-colour;
+}
+
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+ color:@header-links-hover
 }
