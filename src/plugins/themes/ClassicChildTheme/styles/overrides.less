@@ -1,9 +1,9 @@
 // For the sidebar
 .sidebar_wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  padding: 20px 0;
+  padding: 0 20px;
 }
 
 .journal-logo {
@@ -14,10 +14,41 @@ img {
   max-width: none;
 }
 
-
 // For About Home Page Image
 .homepage_image {
   background-size: contain !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
+}
+
+.pkp_block {
+	-webkit-box-flex: 0;
+	position: relative;
+	padding-right: @site-padding;
+	padding-top: @site-padding/3;
+	padding-bottom: @site-padding/3;
+
+	.title {
+		font-weight: bold;
+	}
+}
+
+@media (min-width: 991px) {
+	.pkp_block {
+		flex: auto;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+	.pkp_block {
+		flex: auto;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+	.pkp_block {
+		flex: auto;
+		max-width: 100%;
+	}
 }
