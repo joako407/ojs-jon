@@ -11,8 +11,17 @@
 
 <main class="page static_page">
 	<div class="container-fluid container-page container-narrow">
-		<h1 class="page_title text-center">{$title|escape}</h1>
-		{$content}
+		<div class="tw-ojs-grid">
+		{if $hasSidebar}
+			<div class="tw-ojs-grid-content">
+		{else}
+			<div class="tw-ojs-grid-full">
+		{/if}
+			<h1 class="page_title text-center">{$title|escape}</h1>
+			{$content}
+			</div>
+			{include file="frontend/components/sidebar.tpl"}
+		</div>
 	</div>
 </main>
 

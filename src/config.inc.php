@@ -496,10 +496,10 @@ xslt_command = ""
 ; Display a stack trace when a fatal error occurs.
 ; Note that this may expose private information and should be disabled
 ; for any production system.
-show_stacktrace = On
+show_stacktrace = Off
 
 ; Display an error message when something goes wrong.
-display_errors = On
+display_errors = Off
 
 ; Display deprecation warnings
 deprecation_warnings = Off
