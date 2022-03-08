@@ -355,8 +355,9 @@
 							</a>
 						{/if}
 					{/if}
-					{* License terms modal. Show only if license url is absent *}
-					{if $licenseTerms && !$licenseUrl}
+
+					{* Show the Licence Terms anyways, typically is disclaimer in the case of UNISSA *}
+					{if $licenseTerms}
 						<a class="more_button" data-toggle="modal" data-target="#copyrightModal">
 							{translate key="about.copyrightNotice"}
 						</a>

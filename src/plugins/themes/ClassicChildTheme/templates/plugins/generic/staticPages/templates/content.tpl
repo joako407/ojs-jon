@@ -10,7 +10,7 @@
 {include file="frontend/components/header.tpl" pageTitleTranslated=$title|escape}
 
 <main class="page static_page">
-	<div class="container-fluid container-page container-narrow">
+	<div class="container-fluid container-page">
 		<div class="tw-ojs-grid">
 		{if $hasSidebar}
 			<div class="tw-ojs-grid-content">
