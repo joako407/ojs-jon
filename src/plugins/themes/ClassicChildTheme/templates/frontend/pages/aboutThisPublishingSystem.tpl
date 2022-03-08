@@ -14,7 +14,7 @@
 {include file="frontend/components/header.tpl" pageTitle="about.aboutSoftware"}
 
 <main class="page page_about_publishing_system">
-	<div class="container-fluid container-page container-narrow">
+	<div class="container-fluid container-page">
 	<div class="tw-ojs-grid">
 	{if $hasSidebar}
 		<div class="tw-ojs-grid-content">

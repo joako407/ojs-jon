@@ -13,7 +13,7 @@
 {include file="frontend/components/header.tpl" pageTitle="announcement.announcements"}
 
 <main class="page page_announcements">
-	<div class="container-fluid container-page container-narrow">
+	<div class="container-fluid container-page">
 		<div class="tw-ojs-grid">
 		{if $hasSidebar}
 			<div class="tw-ojs-grid-content">

@@ -12,7 +12,7 @@
 {include file="frontend/components/header.tpl" pageTitleTranslated=$announcement->getLocalizedTitle()|escape}
 
 <div class="page page_announcement">
-	<div class="container-fluid container-page container-narrow">
+	<div class="container-fluid container-page">
 		<div class="tw-ojs-grid">
 		{if $hasSidebar}
 			<div class="tw-ojs-grid-content">

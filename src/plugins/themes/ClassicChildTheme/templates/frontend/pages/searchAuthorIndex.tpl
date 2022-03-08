@@ -14,7 +14,7 @@
 {/strip}
 
 <div class="page page-author-index">
-	<div class="container-fluid container-page container-narrow">
+	<div class="container-fluid container-page">
 
 	{if $hasSidebar}
 		<div class="tw-ojs-grid-content">

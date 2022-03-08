@@ -22,7 +22,7 @@
 {include file="frontend/components/header.tpl" pageTitle="about.contact"}
 
 <main class="page page_contact">
-	<div class="container-fluid container-page container-narrow">
+	<div class="container-fluid container-page">
 	
 	{include file="frontend/components/headings.tpl" currentTitleKey="about.contact"}
 	<div class="edit-content-wrapper">

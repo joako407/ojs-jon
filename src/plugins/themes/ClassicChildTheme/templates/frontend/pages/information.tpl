@@ -14,7 +14,7 @@
 {/if}
 
 <main class="page page_information">
-	<div class="container-fluid container-page container-narrow">
+	<div class="container-fluid container-page">
 
 	<div class="tw-ojs-grid">
 	{if $hasSidebar}

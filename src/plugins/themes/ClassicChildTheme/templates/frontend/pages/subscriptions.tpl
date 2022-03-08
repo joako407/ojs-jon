@@ -12,7 +12,7 @@
 {include file="frontend/components/header.tpl" pageTitle="about.subscriptions"}
 
 <main class="page page_subscriptions">
-	<div class="container-fluid container-page container_subscriptions container-narrow">
+	<div class="container-fluid container-page container_subscriptions">
 	<div class="tw-ojs-grid">
 		{if $hasSidebar}
 			<div class="tw-ojs-grid-content">

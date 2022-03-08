@@ -12,7 +12,7 @@
 {include file="frontend/components/header.tpl" pageTitle="user.login"}
 
 <div class="page page_login">
-	<div class="container-fluid container-page container-narrow">
+	<div class="container-fluid container-page">
 
 	<div class="tw-ojs-grid">
 		{if $hasSidebar}

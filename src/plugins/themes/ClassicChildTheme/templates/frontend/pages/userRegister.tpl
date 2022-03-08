@@ -13,7 +13,7 @@
 {include file="frontend/components/header.tpl" pageTitle="user.register"}
 
 <main class="page page_register">
-	<div class="container-fluid container-page container-narrow">
+	<div class="container-fluid container-page">
 
 	<div class="tw-ojs-grid">
 	{if $hasSidebar}

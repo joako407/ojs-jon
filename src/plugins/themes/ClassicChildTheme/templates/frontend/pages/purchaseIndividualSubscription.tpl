@@ -11,7 +11,7 @@
 {include file="frontend/components/header.tpl" pageTitle="user.subscriptions.purchaseIndividualSubscription"}
 
 <div class="pkp_page_content pkp_page_purchaseIndividualSubscription">
-	<div class="container-fluid container-page container-narrow">
+	<div class="container-fluid container-page">
 	{if $hasSidebar}
 		<div class="tw-ojs-grid-content">
 	{else}	

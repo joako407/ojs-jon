@@ -14,7 +14,7 @@
 {include file="frontend/components/header.tpl" pageTitle="about.submissions"}
 
 <main class="page page_submissions">
-	<div class="container-fluid container-page container-narrow">
+	<div class="container-fluid container-page">
 
 		{include file="frontend/components/headings.tpl" currentTitleKey="about.submissions"}
 
