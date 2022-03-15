@@ -46,7 +46,10 @@
 							{if $thumb}
 								<div class="index-site-journal-thumb">
 									<a href="{$url|escape}">
-										<img src="{$journalFilesPath}{$journal->getId()}/{$thumb.uploadName|escape:"url"}"{if $thumb.altText} alt="{$thumb.altText|escape|default:''}"{/if}>
+										<img
+											class="tw-ojs-site-index-shadow"
+											src="{$journalFilesPath}{$journal->getId()}/{$thumb.uploadName|escape:"url"}"{if $thumb.altText} 
+											alt="{$thumb.altText|escape|default:''}"{/if}>
 									</a>
 								</div>
 							{/if}

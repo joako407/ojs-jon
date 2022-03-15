@@ -14,4 +14,8 @@
   .tw-ojs-grid-full {
     @apply tw-col-span-full;
   }
+
+  .tw-ojs-site-index-shadow {
+    @apply tw-drop-shadow-md hover:tw-drop-shadow-2xl tw-transition hover:tw-scale-[1.025];
+  }
 }
