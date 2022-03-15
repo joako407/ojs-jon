@@ -50,8 +50,6 @@
 				<h1 class="page_title article-full-title">
 					{$publication->getLocalizedFullTitle()|escape}
 				</h1>
-
-
 			</div>
 
 			<div class="col-md-4">
@@ -171,14 +169,14 @@
 					{if $publication->getLocalizedData('coverImage')}
 						{assign var="coverImage" value=$publication->getLocalizedData('coverImage')}
 						<img
-							class="img-fluid"
+							class="tw-drop-shadow-md img-fluid"
 							src="{$publication->getLocalizedCoverImageUrl($article->getData('contextId'))|escape}"
 							alt="{$coverImage.altText|escape|default:''}"
 						>
 					{else}
 						<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
 							<img
-								class="img-fluid"
+								class="tw-drop-shadow-md img-fluid"
 								src="{$issue->getLocalizedCoverImageUrl()|escape}"
 								alt="{$issue->getLocalizedCoverImageAltText()|escape|default:''}"
 							>

@@ -54,9 +54,9 @@
 		{* Issue cover image *}
 		{assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
 		{if $issueCover}
-			<div class="tw-drop-shadow-md issue_cover_block{if !$issue->hasDescription()} align-left{/if}">
+			<div class="issue_cover_block{if !$issue->hasDescription()} align-left{/if}">
 				<a href="{url op="view" page="issue" path=$issue->getBestIssueId()}">
-					<img class="cover_image"
+					<img class="tw-drop-shadow-md cover_image"
 					     src="{$issueCover|escape}" {if $issue->getLocalizedCoverImageAltText() != ''}alt="{$issue->getLocalizedCoverImageAltText()|escape}"{else}alt=""{/if}>
 				</a>
 			</div>
