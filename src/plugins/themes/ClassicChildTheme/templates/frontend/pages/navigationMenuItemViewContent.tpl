@@ -10,9 +10,18 @@
 {include file="frontend/components/header.tpl" pageTitleTranslated=$title|escape}
 
 <main class="page navigation-item-content">
-	<div class="container-fluid container-page container-narrow">
-		<h1 class="page_title text-center">{$title|escape}</h1>
-		{$content}
+	<div class="container-fluid container-page">
+		<div class="tw-ojs-grid">
+		{if $hasSidebar}
+			<div class="tw-ojs-grid-content">
+		{else}
+			<div class="tw-ojs-grid-full">
+		{/if}
+			<h1 class="page_title text-center">{$title|escape}</h1>
+			{$content}
+			</div>
+			{include file="frontend/components/sidebar.tpl"}
+		</div>
 	</div>
 </main>
 
