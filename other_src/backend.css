@@ -24,3 +24,7 @@ a.app__navItem--isCurrent{
 .app__nav {
   @apply bg-ojs-blue;
 }
+
+#saveButton {
+  background: #006798;
+}

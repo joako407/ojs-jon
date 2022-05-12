@@ -21,21 +21,11 @@
 				<a href="{url page="about" op="aboutThisPublishingSystem"}">
 					<img class="footer-brand-image" alt="{translate key="about.aboutThisPublishingSystem"}" src="{$baseUrl}/{$brandImage}">
 				</a>
-				<span>Designed by: 
+				<span class="tw-text-sm">Designed by
 				<a href="https://rayyansecutech.com">
-					<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100px" height="100px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd;"
+					<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="50px" height="50px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd;"
 					viewBox="0 0 3360181 3360181"
 					xmlns:xlink="http://www.w3.org/1999/xlink">
-					<defs>
-						<style type="text/css">
-							<![CDATA[
-								.fil0 {fill:none}
-								.fil1 {fill:white}
-								.fil3 {fill:#0A286E;fill-rule:nonzero}
-								.fil2 {fill:white;fill-rule:nonzero}
-							]]>
-						</style>
-					</defs>
 						<g id="Layer_x0020_1">
 							<metadata id="CorelCorpID_0Corel-Layer"/>
 							<g id="_1736526980048">
