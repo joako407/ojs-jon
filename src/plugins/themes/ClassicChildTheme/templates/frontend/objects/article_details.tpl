@@ -391,7 +391,7 @@
 			{if $publication->getLocalizedData('abstract')}
 				<div class="abstract">
 					<h2>{translate key="article.abstract"}</h2>
-					{$publication->getLocalizedData('abstract')|strip_unsafe_html}
+					{$publication->getLocalizedData('abstract')}
 				</div>
 			{/if}
 
